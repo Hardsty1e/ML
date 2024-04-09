@@ -1,0 +1,16 @@
+Following is the guide to link google drive to your google colab workspace.
+This is especially useful when you have a dataset that is stored in your google drive.
+
+Step 1: Execute the following command in a cell
+
+from google.colab import drive
+drive.mount('/content/drive')
+
+Note: You will be asked to sign using your google account credentials. Follow the steps on screen.
+
+Step 2: Run !pwd command to find the current working directory.
+Since the current working directory might be different to the directory where your files might be stored.
+
+Step 3: Run the following code
+# Load a csv file
+df = pd.read_csv("drive/My Drive/Colab Notebooks/filename.csv")
